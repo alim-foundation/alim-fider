@@ -14,7 +14,7 @@ https://github.com/shah/container-config-framework
  
  `mv fider.ccf-tmpl-conf.jsonet fider.ccf-conf.jsonet`
 
-**Edit the configuration files with actual values: **
+**Edit the configuration files with actual values:**
 
  `vim postgres.secrets.ccf-conf.jsonnet`
 
@@ -26,7 +26,7 @@ https://github.com/shah/container-config-framework
 
 `docker network create appliance`
  
-**Start the CCF container: **
+**Start the CCF container:**
 
 `sudo ccfmake start`
 
