@@ -45,6 +45,14 @@ local containerSecrets = import "postgres.secrets.ccf-conf.jsonnet";
                                    'EMAIL_SMTP_USERNAME='+fider.EMAIL_SMTP_USERNAME,
                                    'EMAIL_SMTP_PASSWORD='+fider.EMAIL_SMTP_PASSWORD,
                                         ],
+		       labels: {
+					'traefik.enable': 'true',
+					'traefik.docker.network': common.defaultDockerNetworkName,
+					'traefik.domain': 'feedback.alim.org',
+					'traefik.backend': context.containerName,
+					'traefik.frontend.entryPoints': 'http',
+					'traefik.frontend.rule': 'Host: feedback.alim.org',
+				       },
                            depends_on: ['db']
 
                 }
