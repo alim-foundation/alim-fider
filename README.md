@@ -8,7 +8,7 @@ https://github.com/shah/container-config-framework
 
 **Rename the template files to original file:**
 
-`cd /opt/alim-fider/`
+`cd /opt/alim-fider/fider`
 
 `mv postgres.secrets.ccf-tmpl-conf.jsonnet postgres.secrets.ccf-conf.jsonnet`
  
@@ -27,7 +27,8 @@ https://github.com/shah/container-config-framework
 `docker network create appliance`
  
 **Start the CCF container:**
+`cd /opt/alim-fider/fider && sudo ccfmake start`
 
-`sudo ccfmake start`
+`cd /opt/alim-fider/traefik && sudo ccfmake start`
 
-Now the fider application will be up and running at *http://ip-address:9000*
+Now the fider application will be up and running at *http://feedback.alim.org*
